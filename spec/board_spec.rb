@@ -38,8 +38,22 @@ describe Board do
                 end
             end
                 
-            it "returns true" do
+            it "returns true when a row of four of the exact same piece is aligned horizontaly" do
                 expect(board_test2.check_winner(peter_player)).to be true
+            end
+        end
+
+        context "When a row of four of the exact same piece is aligned vertically" do
+            subject(:board_test3) { described_class.new }
+            before do
+                4.times do 
+                    # This code will add the same piece vertically to the third column
+                    board_test3.drop_token(3, peter_player)
+                end
+            end
+                
+            it "returns true when a row of four of the exact same piece is aligned vertically" do
+                expect(board_test3.check_winner(peter_player)).to be true
             end
         end
     end
