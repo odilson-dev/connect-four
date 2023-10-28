@@ -56,6 +56,18 @@ class Board
         end
       end
     end
+
+    # checking diagonals rows BOTTOM to TOP -> (/)
+    (@rows - 3).times do |row|
+      (3..@columns - 1).each do |col|
+        if @board[row][col] == player.token &&
+          @board[row + 1][col - 1] == player.token &&
+          @board[row + 2][col - 2] == player.token &&
+          @board[row + 3][col - 3] == player.token
+          return true
+        end
+      end
+    end
     return false
   end
 end
