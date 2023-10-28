@@ -57,7 +57,7 @@ describe Board do
             end
         end
 
-        context "When a row of four of the exact same piece is aligned diagonally" do
+        context "When a row of four of the exact same piece is aligned diagonally sfrom BOTTOM to TOP -> '/'" do
             subject(:board_test4) { described_class.new }
             let(:peter_player) { Player.new("Peter", "X") }
             let(:tom_player) { Player.new("Tom", "O") }
@@ -80,6 +80,32 @@ describe Board do
                 
             it "returns true when a row of four of the exact same piece is aligned diagonally from BOTTOM to TOP -> '/'" do
                 expect(board_test4.check_winner(peter_player)).to be true
+            end
+        end
+
+        context "When a row of four of the exact same piece is aligned diagonally from TOP to BOTTOM -> ( \ ) " do
+            subject(:board_test5) { described_class.new }
+            let(:peter_player) { Player.new("Peter", "X") }
+            let(:tom_player) { Player.new("Tom", "O") }
+            before do
+                # This code will add the same piece vertically to the third column
+                board_test5.drop_token(1, tom_player)
+                board_test5.drop_token(1, tom_player)
+                board_test5.drop_token(1, tom_player)
+                board_test5.drop_token(1, peter_player)
+
+                board_test5.drop_token(2, tom_player)
+                board_test5.drop_token(2, tom_player)
+                board_test5.drop_token(2, peter_player)
+
+                board_test5.drop_token(3, tom_player)
+                board_test5.drop_token(3, peter_player)
+
+                board_test5.drop_token(4, peter_player)    
+            end
+                
+            it "returns true when a row of four of the exact same piece is aligned diagonally from TOP to BOTTOM -> ( \ ) " do
+                expect(board_test5.check_winner(peter_player)).to be true
             end
         end
     end
