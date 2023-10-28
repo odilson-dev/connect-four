@@ -18,4 +18,7 @@ class Board
         puts "+---+---+---+---+---+---+---+"
         end
       end
+
+      def drop_token(column, player)
+      end
 end
