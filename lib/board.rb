@@ -30,4 +30,7 @@ class Board
         end
         false
       end
+
+      def check_winner
+      end
 end
