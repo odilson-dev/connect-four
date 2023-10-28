@@ -28,7 +28,7 @@ describe Board do
     
     describe '#check_winner' do
         subject(:board_test2) { described_class.new }
-        let(:peter_player) { Player.new("Tom", "X") }
+        let(:peter_player) { Player.new("Peter", "X") }
 
         context "When a row of four of the exact same piece is aligned horizontaly" do
             before do
@@ -39,7 +39,7 @@ describe Board do
             end
                 
             it "returns true" do
-                    expect(board_test2.check_winner).to be true
+                expect(board_test2.check_winner(peter_player)).to be true
             end
         end
     end
