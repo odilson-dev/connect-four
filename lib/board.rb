@@ -40,12 +40,22 @@ class Board
           @board[row][col + 1] == player.token &&
           @board[row][col + 2] == player.token &&
           @board[row][col + 3] == player.token
-          p @board
           return true
         end
       end
     end
-    
+
+    # checking horizontal rows
+    (@rows - 3).times do |row|
+      @columns.times do |col|
+        if @board[row][col] == player.token &&
+          @board[row + 1][col] == player.token &&
+          @board[row + 2][col] == player.token &&
+          @board[row + 3][col] == player.token
+          return true
+        end
+      end
+    end
     return false
   end
 end
