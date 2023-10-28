@@ -20,5 +20,14 @@ class Board
       end
 
       def drop_token(column, player)
+        row = @rows - 1
+        while row >= 0
+          if @board[row][column - 1] == ' '
+            @board[row][column - 1] = player.token
+            return true
+          end
+          row -= 1
+        end
+        false
       end
 end
