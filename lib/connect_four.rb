@@ -1,7 +1,7 @@
 require_relative 'board'
 require_relative 'player'
 
-def play
+def game
     board = Board.new
 
     board.display_board
@@ -40,4 +40,15 @@ def play
     end
 end
 
-play
+def start
+  loop do
+      game
+      play = puts "Do you want to play again? [y/n]"
+      if play == 'y'
+          puts "Thank you for playing.\nHere is my GitHub account: odilsonjs"
+          puts "Don't hesitate to throw an eye there for more projects and games"
+          puts "Ciao!"
+          break
+      end
+  end
+end
