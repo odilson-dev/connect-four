@@ -20,8 +20,7 @@ def game
 
     current_player = player_1
     loop do
-
-        puts "#{current_player.name}, it's your turn, choose a column (1-7):"
+        puts "#{current_player.name}, it's your turn, please choose a column (1-7):"
         column = gets.to_i
         if column >= 1 && column <= 7
           if board.drop_token(column, current_player)
@@ -41,14 +40,16 @@ def game
 end
 
 def start
+  game
   loop do
-      game
-      play = puts "Do you want to play again? [y/n]"
-      if play == 'y'
-          puts "Thank you for playing.\nHere is my GitHub account: odilsonjs"
+      puts "Do you want to play again? [y/n]"
+      play = gets.chomp
+      if play == 'n'
+          puts "Thank you for playing guys.\nHere is my GitHub account: odilsonjs"
           puts "Don't hesitate to throw an eye there for more projects and games"
           puts "Ciao!"
           break
       end
+      game
   end
 end
