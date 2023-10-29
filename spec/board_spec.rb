@@ -104,8 +104,39 @@ describe Board do
                 board_test5.drop_token(4, peter_player)    
             end
                 
-            it "returns true when a row of four of the exact same piece is aligned diagonally from TOP to BOTTOM -> ( \ ) " do
+            it "returns true when a row of four of the exact same piece is aligned diagonally from TOP to BOTTOM -> '\' " do
                 expect(board_test5.check_winner(peter_player)).to be true
+            end
+        end
+    end
+    
+    describe "#full?" do
+        let(:peter_player) { Player.new("Peter", "X") }
+        context "When the board is full" do
+            subject(:board_test6) { described_class.new }
+            before do
+                6.times do 
+                    7.times do | count |
+                        board_test6.drop_token(count + 1, peter_player)
+                    end
+                end
+            end
+            it "returns true" do
+                expect(board_test6).to be_full
+            end
+        end
+
+        context "When the board is not full yet" do
+            subject(:board_test7) { described_class.new }
+            before do
+                5.times do 
+                    7.times do | count |
+                        board_test7.drop_token(count + 1, peter_player)
+                    end
+                end
+            end
+            it "returns false" do
+                expect(board_test7).to_not be_full
             end
         end
     end
