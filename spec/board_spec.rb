@@ -109,4 +109,35 @@ describe Board do
             end
         end
     end
+    
+    describe "#full?" do
+        let(:peter_player) { Player.new("Peter", "X") }
+        context "When the board is full" do
+            subject(:board_test6) { described_class.new }
+            before do
+                6.times do 
+                    7.times do | count |
+                        board_test6.drop_token(count + 1, peter_player)
+                    end
+                end
+            end
+            it "returns true" do
+                expect(board_test6.full?).to be_full
+            end
+        end
+
+        context "When the board is not full yet" do
+            subject(:board_test7) { described_class.new }
+            before do
+                5.times do 
+                    7.times do | count |
+                        board_test7.drop_token(count + 1, peter_player)
+                    end
+                end
+            end
+            it "returns false" do
+                expect(board_test7.full?).to_not be_full
+            end
+        end
+    end
 end

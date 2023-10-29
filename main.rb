@@ -1,4 +1,4 @@
 require_relative 'lib/connect_four'
 puts "WELCOME ON CONNECT FOUR GAME!"
-puts "Let's start playing right now!"
+puts "Let's start playing right now!\n\n"
 start

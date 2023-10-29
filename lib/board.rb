@@ -82,4 +82,7 @@ class Board
     end
     return false
   end
+
+  def full?
+  end
 end
