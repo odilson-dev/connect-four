@@ -84,5 +84,6 @@ class Board
   end
 
   def full?
+    !(@board.map { |row| row.include?(' ') }.any?)
   end
 end

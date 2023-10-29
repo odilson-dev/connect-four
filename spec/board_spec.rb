@@ -122,7 +122,7 @@ describe Board do
                 end
             end
             it "returns true" do
-                expect(board_test6.full?).to be_full
+                expect(board_test6).to be_full
             end
         end
 
@@ -136,7 +136,7 @@ describe Board do
                 end
             end
             it "returns false" do
-                expect(board_test7.full?).to_not be_full
+                expect(board_test7).to_not be_full
             end
         end
     end
