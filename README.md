@@ -11,3 +11,6 @@ https://www.theodinproject.com/lessons/ruby-connect-four
 
 ## Replit Link
 https://replit.com/@odilsonjs/Project-Connect-Four?v=1
+
+## GitHub Repos
+https://github.com/odilsonjs/Connect-four
