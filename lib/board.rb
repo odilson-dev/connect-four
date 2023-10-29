@@ -1,3 +1,5 @@
+require 'colorize'
+
 class Board
   attr_reader :board
   def initialize(rows = 6, columns = 7)
@@ -7,15 +9,15 @@ class Board
   end
 
   def display_board
-    puts "  1   2   3   4   5   6   7"
-    puts "+---+---+---+---+---+---+---+"
+    puts "  1   2   3   4   5   6   7".light_green
+    puts "+---+---+---+---+---+---+---+".magenta
     @rows.times do |row|
-        row_display = "|"
+        row_display = "|".magenta
         @columns.times do |col|
-            row_display += " #{@board[row][col]} |"
+            row_display += " #{@board[row][col]}" + " |".magenta
         end
         puts row_display
-    puts "+---+---+---+---+---+---+---+"
+    puts "+---+---+---+---+---+---+---+".magenta
     end
   end
 

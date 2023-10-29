@@ -104,7 +104,7 @@ describe Board do
                 board_test5.drop_token(4, peter_player)    
             end
                 
-            it "returns true when a row of four of the exact same piece is aligned diagonally from TOP to BOTTOM -> ( \ ) " do
+            it "returns true when a row of four of the exact same piece is aligned diagonally from TOP to BOTTOM -> '\' " do
                 expect(board_test5.check_winner(peter_player)).to be true
             end
         end
