@@ -20,6 +20,9 @@ def game
 
     current_player = player_1
     loop do
+      if board.full? do
+        puts "GAME OVER!"
+      else
         puts "#{current_player.name}, it's your turn, please choose a column (1-7):"
         column = gets.to_i
         if column >= 1 && column <= 7
@@ -36,6 +39,7 @@ def game
         else
           puts "Invalid input. Please choose a column from 1 to 7."
         end
+      end
     end
 end
 
