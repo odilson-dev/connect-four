@@ -11,6 +11,7 @@ def game
     # Create Player 1 and Player 2
     puts "Enter the name of the first player"
     player_1_name = gets.chomp
+
     player_1 = Player.new(player_1_name, "X".light_green)
     puts "Hello #{player_1.name}, the piece '" + "X".light_green + "' has been assigned to you \n"
 
@@ -22,8 +23,10 @@ def game
     puts "Okay! The game can start now. \u{1f929} \n".light_blue
 
 
+
     current_player = player_1
     loop do
+
       if board.full?
         puts "GAME OVER! \U{1F62A}".light_red
         break
@@ -34,11 +37,14 @@ def game
           if board.drop_token(column, current_player)
             board.display_board
             if board.check_winner(current_player)
+
               puts "CONGATULATIONS #{current_player.name.upper} \U{1F973}, YOU WON!!!".light_green
+
               break
             end
             current_player == player_1 ? current_player = player_2 : current_player = player_1
           else
+
             puts "Column is full. Choose another column.".light_cyan
           end
         else
@@ -46,6 +52,7 @@ def game
         end
       end
   end
+
 end
 
 def start
