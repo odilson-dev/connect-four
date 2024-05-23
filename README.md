@@ -50,11 +50,11 @@ The main objective of this project is to implement the Connect Four game in a co
    
 3. **Run tests**:
    ```bash
- rspec
+   rspec
 
 4. **Play the game**:
    ```bash
- ruby lib/connect_four.rb
+    ruby lib/connect_four.rb
 
 ## Learning Objectives
 
