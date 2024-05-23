@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Welcome to the TDD Connect Four project! In this project, you'll be building the classic game Connect Four using Ruby and the Test-Driven Development (TDD) approach. Connect Four is a two-player game where players take turns dropping pieces into a grid, aiming to get four of their pieces in a row, column, or diagonal.
+In this project, i built the classic game Connect Four using Ruby and the Test-Driven Development (TDD) approach. Connect Four is a two-player game where players take turns dropping pieces into a grid, aiming to get four of their pieces in a row, column, or diagonal.
 
 ## Project Overview
 
-The main objective of this project is to implement the Connect Four game in a command-line interface while applying TDD principles. You'll write tests first, then implement the code to pass those tests, ensuring your game is robust and well-tested.
+The main objective of this project is to implement the Connect Four game in a command-line interface while applying TDD principles. i wrote tests first, then implement the code to pass those tests, ensuring my game is robust and well-tested.
 
 ## Features
 
