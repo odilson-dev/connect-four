@@ -43,22 +43,18 @@ The main objective of this project is to implement the Connect Four game in a co
    ```bash
    git clone https://github.com/your-username/connect-four.git
    cd connect-four
-   ```
    
 2. **Install Dependancies**:
    ```bash
    bundle install
-   ```
    
 3. **Run tests**:
    ```bash
  rspec
-    ```
 
 4. **Play the game**:
    ```bash
  ruby lib/connect_four.rb
-    ```
 
 ## Learning Objectives
 
